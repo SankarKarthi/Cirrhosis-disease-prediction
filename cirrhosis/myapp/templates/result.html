@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Input Form Result</title>
+
+    <!-- Add some styles for better appearance -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .result-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-heading {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .result-value {
+            color: #007BFF;
+            font-size: 36px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2 class="result-heading">Cirrhosis Stage Prediction Result</h2>
+        <p class="result-value">The Stage of Cirrhosis is {{ result|floatformat:"0" }}</p>
+    </div>
+</body>
+</html>

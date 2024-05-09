@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #bee8ec; /* Light shade grey background color */
+            background-image: url("C:\Users\sanka\Pictures\cheems\cheems.jpg"); /* Replace 'medical_image.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fc6e6e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Navigation menu styles */
+        nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation menu -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <h1>Enter the Data</h1>
+
+    <form action="{% url 'result' %}" method="get">
+        {% csrf_token %}
+        <!-- Age -->
+        <label for="Age">Age:</label>
+        <input type="text" required name="Age">
+
+        <!-- Sex -->
+        <label for="Sex">Sex:</label>
+        <select name="Sex" required>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+
+        <!-- Drug -->
+        <label for="Drug">Drug:</label>
+        <select name="Drug" required>
+            <option value="0">D-penicillamine</option>
+            <option value="1">Placebo</option>
+        </select>
+
+        <!-- N_days -->
+        <label for="N_Days">N_days:</label>
+        <input type="text" required name="N_Days">
+
+        <!-- Ascites -->
+        <label for="Ascites">Ascites:</label>
+        <select name="Ascites" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <!-- Hepatomegaly -->
+        <label for="Hepatomegaly">Hepatomegaly:</label>
+        <select name="Hepatomegaly" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <!-- Edema -->
+        <label for="Edema">Edema:</label>
+        <select name="Edema" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <!-- Cholesterol -->
+        <label for="Cholesterol">Cholesterol:</label>
+        <input type="text" required name="Cholesterol">
+
+        <!-- Copper -->
+        <label for="Copper">Copper:</label>
+        <input type="text" required name="Copper">
+
+        <!-- Platelets -->
+        <label for="Platelets">Platelets:</label>
+        <input type="text" required name="Platelets">
+
+        <!-- Spiders -->
+        <label for="Spiders">Spiders:</label>
+        <select name="Spiders" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <!-- Bilirubin -->
+        <label for="Bilirubin">Bilirubin:</label>
+        <input type="text" required name="Bilirubin">
+
+        <!-- Albumin -->
+        <label for="Albumin">Albumin:</label>
+        <input type="text" required name="Albumin">
+
+        <!-- Alk_Phos -->
+        <label for="Alk_Phos">Alk_Phos:</label>
+        <input type="text" required name="Alk_Phos">
+
+        <!-- SGOT -->
+        <label for="SGOT">SGOT:</label>
+        <input type="text" required name="SGOT">
+
+        <!-- Triglycerides -->
+        <label for="Triglycerides">Triglycerides:</label>
+        <input type="text" required name="Tryglicerides">
+
+        <!-- Prothrombin -->
+        <label for="Prothrombin">Prothrombin:</label>
+        <input type="text" required name="Prothrombin">
+
+        <!-- Add a submit button -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- About section -->
+    <div id="about">
+        <h1>About Us</h1>
+        <h3>Our Cirrhosis Prediction Analysis represents a comprehensive approach to leveraging machine learning for predicting the stage of cirrhosis in patients. </h3>
+        <h3>This project encompasses the entire data analysis pipeline, incorporating data encryption, model building, and seamless integration with the Django web framework for an intuitive user interface.</h3>
+    </div>
+
+    <!-- Contact section -->
+    <div id="contact">
+        <h1>Contact Us</h1>
+        <h3>Sankar Karthikeyan P (sankarkarthikeyanp602@gmail.com) and Rosina Begam M (rosinarosinz@gmail.com) </h3>
+        <h3>welcome you to reach out for any inquiries or assistance. </h3>
+        <h3>Whether you have questions about the cirrhosis prediction analysis implemented on this platform or any related concerns, feel free to contact us. </h3>
+        <h3>Your feedback and inquiries are valuable to us, and we are here to provide the necessary support. For general inquiries, you can also reach us at the provided contact number
